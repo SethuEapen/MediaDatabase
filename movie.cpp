@@ -9,9 +9,9 @@ Movie::Movie()
 {
 }
 
-/*int getType(){
+int Movie::getType(){
   return 0;
-  }*/
+}
 
 char* Movie::getDirector(){
   return director;

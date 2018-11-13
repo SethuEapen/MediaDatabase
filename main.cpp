@@ -4,6 +4,7 @@
 #include "media.h"
 #include "movie.h"
 #include "videogame.h"
+#include "music.h"
 
 using namespace std;
 
@@ -58,20 +59,73 @@ void ADD(vector<Media*>* media)
     cin.ignore(10000, '\n');
     media->push_back(videogame);
   }
+  else if(strcmp(input, "music") == 0){
+    Music* music = new Music();
+    cout << "Title: ";
+    cin.get(music->getTitle(), 50);
+    cin.clear();
+    cin.ignore(10000, '\n');
+    cout << "Year: ";
+    cin >> *music->getYear();
+    cin.clear();
+    cin.ignore(10000,'\n');
+    cout << "Artist: ";
+    cin.get(music->getArtist(), 20);
+    cin.clear();
+    cin.ignore(10000, '\n');
+    cout << "Duration: ";
+    cin >> *music->getDuration();
+    cin.clear();
+    cin.ignore(10000, '\n');
+    cout << "Publisher: ";
+    cin.get(music->getPublisher(), 20);
+    cin.clear();
+    cin.ignore(10000, '\n');
+    media->push_back(music);
+  }
   else
   {
     cout << "Sorry that type of media is not supported" << endl;
   }
-  /*Media* media = new Media();
-  *media->getYear() = 3455;
-  cout << *media->getYear();
-  cin >> media->getTitle();
-  cout << media->getTitle();
-  */
 }
+
+vector<char*> SEARCH(char* title, vector<Media*>* media)
+{
+  vector<char*> titles;
+  vector<Media*>::iterator it;
+  for(it = media->begin(); it != media->end(); ++it){
+    //titles->push_back(
+    cout << (*it)->getTitle();
+  }
+  return titles;
+}
+
 int main()
 {
-  vector<Media*> mediaArr;
-  ADD(&mediaArr);
-  return 0;
+  bool exit = false;
+  while(!exit){
+    vector<Media*> mediaArr;
+    char input[7];
+    cout << "Do you wnat to add, search, delete, or exit:";
+    cin.get(input, 7);
+    cin.clear();
+    cin.ignore(10000, '\n');
+    if(strcmp(input, "add") == 0){
+      ADD(&mediaArr);
+    }
+    else if(strcmp(input, "search") == 0){
+      char input2[50];
+      cin >> input2;
+      vector<char*> titles = SEARCH(input2, &mediaArr);
+      //vector<char*>::iterator it;
+      //for(it = 
+    }
+    else if(strcmp(input, "exit") == 0){
+      exit = true;
+    }
+    else{
+      cout << "Sorry I dont know what you mean" << endl;
+    }
+    return 0;
+  }
 }

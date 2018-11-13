@@ -1,19 +1,21 @@
-#ifndef VIDEOGAME_H
-#define VIDEOGAME_H
+#ifndef MUSIC_H
+#define MUSIC_H
 #include <iostream>
 #include <cstring>
 #include "media.h"
 
 using namespace std;
 
-class Videogame : public Media {
+class Music : public Media {
  public:
-  Videogame();
+  Music();
   virtual int getType();
+  char* getArtist();
+  int* getDuration();
   char* getPublisher();
-  float* getRating();
  private:
+  char artist[20];
+  int duration;
   char publisher[20];
-  float rating;
 };
 #endif

@@ -8,6 +8,10 @@ Media::Media()
 {
 }
 
+int Media::getType(){
+  return 0;
+}
+
 int* Media::getYear(){
   return &year;
 }

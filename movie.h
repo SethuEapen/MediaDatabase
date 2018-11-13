@@ -9,7 +9,7 @@ using namespace std;
 class Movie : public Media {
  public:
   Movie();
-  //  int getType();
+  virtual int getType();
   char* getDirector();
   int* getDuration();
   float* getRating();

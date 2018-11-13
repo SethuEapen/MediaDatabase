@@ -10,7 +10,7 @@ class Media{
   Media();
   int* getYear();
   char* getTitle();
-  //virtual int getType() = 0;
+  virtual int getType();
  private:
   int year;
   char title[50];

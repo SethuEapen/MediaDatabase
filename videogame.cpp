@@ -9,9 +9,9 @@ Videogame::Videogame()
 {
 }
 
-/*int getType(){
+int Videogame::getType(){
   return 1;
-  }*/
+}
 
 char* Videogame::getPublisher(){
   return publisher;
