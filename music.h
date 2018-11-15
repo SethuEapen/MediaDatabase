@@ -1,15 +1,17 @@
+//header guard
 #ifndef MUSIC_H
 #define MUSIC_H
+//imports
 #include <iostream>
 #include <cstring>
 #include "media.h"
 
 using namespace std;
 
-class Music : public Media {
+class Music : public Media {//class decloration
  public:
-  Music();
-  virtual int getType();
+  Music();//constructor
+  virtual int getType();//virtual function from media class
   char* getArtist();
   int* getDuration();
   char* getPublisher();
@@ -18,4 +20,4 @@ class Music : public Media {
   int duration;
   char publisher[20];
 };
-#endif
+#endif//header guard

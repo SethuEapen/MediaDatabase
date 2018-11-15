@@ -1,3 +1,4 @@
+//imports
 #include <iostream>
 #include <cstring>
 #include "media.h"
@@ -5,22 +6,22 @@
 
 using namespace std;
 
-Music::Music()
+Music::Music()//constructor
 {
 }
 
-int Music::getType(){
+int Music::getType(){//returns 2 to indicate music
   return 2;
 }
 
-char* Music::getArtist(){
+char* Music::getArtist(){//returns pointer to artist
   return artist;
 }
 
-int* Music::getDuration(){
+int* Music::getDuration(){//returns pointer to duration
   return &duration;
 }
 
-char* Music::getPublisher(){
+char* Music::getPublisher(){//returns pointer to publisher
   return publisher;
 }
