@@ -1,0 +1,36 @@
+go south
+go south
+go east
+take Snow Machine
+go east
+go east
+go east
+take Yellow Hat
+go west
+go west
+go west
+go west
+go north
+go east
+go east
+go north
+take Bath Toys
+go east
+go east
+take Poopy Banana
+go south
+go west
+take Pumpkin
+go north
+go west
+go south
+go west
+go west
+go north
+inventory
+give
+Snow Machine
+Yellow Hat
+Bath Toys
+Poopy Banana
+Pumpkin
